@@ -299,8 +299,9 @@ export class NationMIRVBehavior {
     return calculateTerritoryCenter(this.game, target);
   }
 
-  private cost(type: UnitType): Gold {
-    if (this.player === null) throw new Error("not initialized");
-    return this.game.unitInfo(type).cost(this.game, this.player);
-  }
+  // Replace your existing cost method with this:
+private cost(type: UnitType): Gold {
+  // We ignore the game's unitInfo and return 0 for everything in this behavior
+  return 0 as Gold;
+}
 }
